@@ -1,16 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"main/examples/channels"
+)
 
 func main() {
 
-	myChannel := make(chan string)
-
-	go func() {
-		myChannel <- "data"
-	}()
-
-	msg := <-myChannel
-
-	fmt.Println(msg)
+	channels.Channel()
 }
